@@ -1,0 +1,52 @@
+# --- DEPENDENCIES ---
+node_modules
+*/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- ENVIRONMENT VARIABLES (SANGAT PENTING) ---
+# Jangan sampai API Key bocor!
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.*
+
+# --- NEXT.JS (Frontend) ---
+.next
+out
+build
+dist
+next-env.d.ts
+.vercel
+*.tsbuildinfo
+
+# --- BUN / ELYSIA (Backend) ---
+# Bun build artifacts
+.bun
+*.bun
+
+# Jika kamu full pakai Bun, kita ignore lockfile manager lain biar gak konflik
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# --- DATABASE & PRISMA ---
+# Ignore file database lokal sqlite (jika ada sisa)
+*.sqlite
+*.sqlite-journal
+*.db
+# Ignore generated prisma client (jika generate di folder custom)
+/src/generated/prisma
+
+# --- OS & MISC ---
+.DS_Store
+Thumbs.db
+*.pem
+*.log
+coverage
