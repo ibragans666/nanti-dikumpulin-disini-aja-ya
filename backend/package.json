@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.0",
+    "@supabase/supabase-js": "^2.86.0",
+    "elysia": "latest",
+    "elysia-helmet": "^3.0.0",
+    "elysia-rate-limit": "^4.4.2",
+    "onnxruntime-node": "^1.23.2",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
