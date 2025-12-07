@@ -11,37 +11,70 @@ Banner](https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1000
 [![Supabase](https://img.shields.io/badge/Database-Supabase-green?style=for-the-badge&logo=supabase)](https://supabase.com/)
 [![ONNX](https://img.shields.io/badge/AI-ONNX_Runtime-blue?style=for-the-badge&logo=onnx)](https://onnx.ai/)
 
+------------------------------------------------------------------------
+
 ## 📖 Tentang Proyek
 
 **Dokter Tani AI** adalah sistem pakar pertanian modern yang dirancang
 untuk mendeteksi penyakit pada tanaman pangan vital (Padi & Jagung)
 secara instan menggunakan kecerdasan buatan.
 
-Aplikasi ini menggabungkan **Computer Vision** dan **Generative AI**
-untuk memberikan deteksi cepat serta konsultasi pertanian yang mendalam.
+Aplikasi ini menggabungkan **Computer Vision**, **Expert Knowledge**,
+dan **Generative AI** untuk menghasilkan deteksi cepat serta rekomendasi
+penanganan yang mendalam dan mudah dipahami.
 
-### 🚀 Fitur Unggulan
+------------------------------------------------------------------------
 
--   👁️ Deteksi penyakit berbasis model ONNX MobileNetV2.
--   🤖 Konsultasi AI menggunakan LLM (Claude/Qwen).
--   🛡️ Keamanan berlapis: Rate Limiter, Magic Number Validation, Helmet
-    Headers.
--   🌓 UI Solarpunk & Cyberpunk.
--   ☁️ Cloud Sync via Supabase.
--   📱 Mobile First.
+## 🔄 Workflow Sistem
+
+**1. Input Gambar Tanaman**\
+Pengguna mengunggah foto daun tanaman padi atau jagung sebagai bahan
+analisis awal.
+
+**2. CNN MobileNetV2 (Fine-tuned ONNX)**\
+Model pre-trained MobileNetV2 yang sudah di-fine-tune dengan dataset
+penyakit padi dan jagung melakukan klasifikasi awal menggunakan ONNX
+Runtime Node.
+
+**3. Expert Knowledge (Rule-Based)**\
+Hasil klasifikasi diteruskan ke modul pengetahuan pakar sederhana untuk
+menambahkan deskripsi penyakit serta saran teknis awal.
+
+**4. Generative AI (Kolosal AI - Claude Sonnet 4.5)**\
+Modul expert menghasilkan konteks deskripsi yang kemudian dikirimkan ke
+API Kolosal.ai menggunakan model Claude Sonnet 4.5 untuk memperkaya
+hasil analisis dengan rekomendasi penanganan dan pencegahan yang detail.
+
+**5. Output Akhir**\
+Sistem menghasilkan:\
+- Nama penyakit\
+- Penjelasan lengkap\
+- Cara penanganan\
+- Pencegahan di masa depan
+
+------------------------------------------------------------------------
+
+## 🚀 Fitur Unggulan
+
+-   👁️ Deteksi penyakit berbasis MobileNetV2 + ONNX Runtime\
+-   🤖 Konsultasi AI menggunakan Claude Sonnet 4.5\
+-   🛡️ Proteksi: Rate Limiter, Magic Number Validation, Helmet Headers\
+-   🌓 UI bertema Solarpunk × Cyberpunk\
+-   ☁️ Cloud Sync via Supabase\
+-   📱 Mobile-first design
 
 ------------------------------------------------------------------------
 
 ## 🛠️ Teknologi (Tech Stack)
 
-  Area               Teknologi                     Fungsi Utama
-  ------------------ ----------------------------- --------------------------
-  **Frontend**       Next.js 14, Tailwind CSS v4   UI & Client Logic
-  **Backend**        Bun, ElysiaJS                 Server super cepat
-  **AI Vision**      ONNX Runtime Node             Model klasifikasi gambar
-  **Generatif AI**   Kolosal API                   Penyuluhan berbasis LLM
-  **Database**       Supabase (PostgreSQL)         Riwayat scan
-  **Storage**        Supabase Storage              Penyimpanan gambar
+  Area                Teknologi                     Fungsi Utama
+  ------------------- ----------------------------- --------------------------
+  **Frontend**        Next.js 14, Tailwind CSS v4   UI & Client Logic
+  **Backend**         Bun, ElysiaJS                 Server super cepat
+  **AI Vision**       ONNX Runtime Node             Model klasifikasi gambar
+  **Generative AI**   Kolosal API                   Penyuluhan berbasis LLM
+  **Database**        Supabase                      Riwayat scan
+  **Storage**         Supabase Storage              Penyimpanan gambar
 
 ------------------------------------------------------------------------
 
@@ -61,14 +94,14 @@ cd backend
 bun install
 ```
 
-Buat file `.env`:
+Buat `.env`:
 
     PORT=3001
     SUPABASE_URL="https://your-project.supabase.co"
     SUPABASE_KEY="your-service-role-key"
     GEN_AI_API_KEY="sk-xxxxxx"
 
-Jalankan:
+Jalankan backend:
 
 ``` bash
 bun run src/index.ts
@@ -116,21 +149,23 @@ Akses: http://localhost:3000
 
 ## 🧠 Model AI
 
-Model MobileNetV2 ditraining dengan dataset PlantVillage untuk
+MobileNetV2 ditraining dengan subset dataset PlantVillage untuk
 mendeteksi penyakit:
 
 **Jagung:** Blight, Rust, Gray Leaf Spot, Healthy\
 **Padi:** Bacterial Blight, Blast, Brownspot, Tungro
 
-Akurasi validasi \~96%.
+Akurasi validasi ±96%.
 
 ------------------------------------------------------------------------
 
-## 🏆 Tim Pengembang -- "Irigasi Bluetooth"
+## 🏆 Tim Pengembang --- "Irigasi Bluetooth"
 
 -   Atlas Vierra --- Lead AI Architect\
 -   Lyra Kirei --- UI/UX Alchemist\
 -   Orion Dusk --- System Engineer
+
+`<br>`{=html}
 
 ```{=html}
 <p align="center">
