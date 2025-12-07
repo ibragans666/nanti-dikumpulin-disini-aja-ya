@@ -161,9 +161,9 @@ Akurasi validasi ±96%.
 
 ## 🏆 Tim Pengembang --- "Irigasi Bluetooth"
 
--   Atlas Vierra --- Lead AI Architect\
--   Lyra Kirei --- UI/UX Alchemist\
--   Orion Dusk --- System Engineer
+-   [Ibra Kaslana](https://github.com/ibragans666) Lead
+-   [Aruffyal]
+-   [Suami sah Arcueid]
 
 `<br>`{=html}
 
