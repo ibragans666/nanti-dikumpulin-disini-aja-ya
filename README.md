@@ -169,12 +169,12 @@ Akurasi validasi ±96%.
 -   [Aruffyal](https://github.com/kholiklutfi29)
 -   [Suami sah Arcueid](https://github.com/gimmas/)
 
-`<br>`{=html}
-
-```{=html}
+## Bonus
 <p align="center">
-```
-Made with ❤️ and ☕ in Indonesia.`<br>`{=html} Hackathon Project 2025.
-```{=html}
+  <img src="https://i.pinimg.com/1200x/19/89/b5/1989b5a35046fa3de4f7728e9fc0bfbc.jpg" width="450" />
 </p>
-```
+<p align="center">
+  <i>"This will be a romantic story like none that has come before."</i>
+  <br>— Elysia
+</p>
+
